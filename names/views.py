@@ -3,8 +3,7 @@ from rest_framework import status
 from rest_framework.views import APIView
 
 from drf_spectacular.utils import (
-    extend_schema, extend_schema_view,
-    OpenApiExample)
+    extend_schema, extend_schema_view)
 
 from .serializers import (
     DummyGenderRequestSerializer,
@@ -14,6 +13,7 @@ from .serializers import (
 
 
 from .models import Man, Woman
+
 
 @extend_schema(tags=["Get gender by name"],
                request=DummyGenderRequestSerializer,
@@ -58,5 +58,4 @@ class GetGenderByNameAPIView(APIView):
              'name': name,
              'gender': gender
              },
-             status=status.HTTP_200_OK
-            ) 
+            status=status.HTTP_200_OK)

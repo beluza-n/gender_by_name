@@ -1,8 +1,10 @@
 from rest_framework import serializers
 
+
 class DummyGenderRequestSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     name = serializers.CharField(max_length=50)
+
 
 class DummyGenderResponseSerializer(serializers.Serializer):
     id = serializers.IntegerField()
@@ -12,4 +14,3 @@ class DummyGenderResponseSerializer(serializers.Serializer):
 
 class DummyDetailSerializer(serializers.Serializer):
     detail = serializers.CharField(max_length=256)
-    

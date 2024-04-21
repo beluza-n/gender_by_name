@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import RegexValidator
 
+
 class Woman(models.Model):
     name_regex = RegexValidator(regex=r"^[a-zA-Z]+$")
     name = models.CharField(
