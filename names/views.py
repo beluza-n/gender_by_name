@@ -31,7 +31,7 @@ from .models import Man, Woman
             ))
 class GetGenderByNameAPIView(APIView):
     """
-    Determines gender by name.
+    Determines gender by name (male or female).
     """
 
     def post(self, request):
